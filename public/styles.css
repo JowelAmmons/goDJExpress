@@ -1,0 +1,23 @@
+body{
+  background-image: url('Skyline02.jpeg')
+}
+h3{
+  margin-top: 40px;
+  text-align: center;
+  color: ivory;
+}
+h1{
+  text-align: center;
+  color: ivory;
+}
+h2{
+  text-align: center;
+  color: ivory;
+}
+form{
+  margin-left: 30%;
+}
+.request{
+  text-align: center;
+  color: ivory;
+}

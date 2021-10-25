@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Go DJ, Thats my DJ</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  
+  <h1>Live DJ player</h1>
+  <h2>Funk master Jeon on the ones and two's!</h2>
+  
+
+  <iframe allow="autoplay" width="100%" height="200" src="https://www.iheart.com/live/power-99-2009/?embed=true" frameborder="0"></iframe>
+
+
+  <h3>Song Request</h3>
+  <ul class="request">
+  <% for(var i=0; i<song.length; i++) {%>
+    <li class="request">
+      <span><%= song[i].user %></span>
+      <span><%= song[i].song %></span>
+      <span><%= song[i].artist %></span>
+      <span><%= song[i].thumbUp %></span>
+      <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+      <!-- <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span> -->
+      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+    </li>
+  <% } %>
+  </ul>
+
+  <h2>Make a song request to Funk Master Jeon!</h2>
+
+  <form action="/song" method="POST">
+    <input type="text" placeholder="user" name="user">
+    <input type="text" placeholder="song" name="song">
+    <input type="text" placeholder="artist" name="artist">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
